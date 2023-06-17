@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with ml5.js</title>
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>  
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>  <!-- ml5 -->
+    <script defer src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+<body>
+     
+    <p></p>
+    <script src="sketch.js"></script>
+    <script>
+        fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=paypal`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.query.search[0].snippet);
+        })
+    </script>
+</body>
+</html>
